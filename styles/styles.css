@@ -9,3 +9,251 @@
 - Radial Gradient: hsl(214, 47%, 23%) to hsl(237, 49%, 15%)
 - Family: [Barlow Semi Condensed](https://fonts.google.com/specimen/Barlow+Semi+Condensed)
 - Weights: 600, 700*/
+
+html {
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    /*border: 1px solid red;*/
+}
+body {
+    background-color:  hsl(229, 25%, 31%);
+    padding: 20px 0;
+}
+header {
+    border: 2px solid hsl(217, 16%, 45%);
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    color: #fff;
+    border-radius: 5px;
+}
+main {
+    width: 75%;
+    /*width: 200px;*/
+    margin: auto;
+}
+
+.translate-displayPage {
+    /*width: 0;
+    height: 0;
+    overflow: hidden;
+    padding: 0;*/
+    transform: translateX(-100%);
+}
+.hide-choicePage {
+    /*width: 0;
+    height: 0;
+    overflow: hidden;
+    padding: 0;*/
+    transform: translateX(-200%);
+}
+.options p {
+    font-weight: 700;
+    line-height: 1.0;
+    font-size: 16px;
+}
+header .score-box {
+    background-color: #fff;
+    color: hsl(229, 64%, 46%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+.score-box .count {
+    font-size: 30px;
+    font-weight: 700;
+}
+.choices {
+    display: flex;
+    justify-content: space-between;
+    height: 300px;
+    position: relative;
+}
+.choices article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+.choices article p {
+    color: #fff;
+    font-size: 14px;
+}
+.img-container {
+    background-color: #fff;
+    border: 12px solid;
+    height: 110px;
+    width: 110px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+}
+.paper {
+    border-color:  hsl(230, 89%, 65%);
+}
+.rock {
+    border-color: hsl(349, 70%, 56%);
+}
+.scissors {
+    border-color: hsl(40, 84%, 53%);
+}
+.img-container img {
+    width: ;
+
+}
+.choices .decide {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    width: 55%;
+    transform: translateX(-50%);
+}
+.choices .hide-decide {
+    display: none;
+}
+.decide h1 {
+    font-size: 30px;
+    color: #fff;
+    font-weight: 700;
+}
+.decide button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: hsl(229, 25%, 31%);
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+main .display {
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    height: 250px;
+}
+.display section {
+    position: relative;
+    cursor: pointer;
+}
+main .display section:nth-child(2) {
+    align-self: flex-end;
+}
+.lose-btn:hover {
+    color: rgba(255, 0, 0, 0.952);
+    border:1px solid rgba(255, 0, 0, 0.925);
+}
+.win-btn:hover {
+    color: rgb(0, 128, 0);
+    border: 1px solid rgba(0, 128, 0, 0.966);
+}
+.rule-overlay {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    z-index: 100;
+    background-color:  #fff;
+}
+.rule-overlay i {
+    color: hsl(217, 16%, 45%);
+    font-size: 20px;
+    cursor: pointer;
+}
+/*.display section:nth-child(1)::after {
+    content: '';
+    width: 150px;
+    height: 3px;
+    position: absolute;
+    left: 100%;
+    top: 20%;
+    transform: ;
+    background-color: red;
+}
+.display section:nth-child(1)::before {
+    content: '';
+    width: 100px;
+    height: 3px;
+    position: absolute;
+    left: 40%;
+    top: 159%;
+    transform: ;
+    transform: rotate(55deg);
+    background-color: blue;
+}*/
+
+footer {
+    position: absolute;
+    bottom: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+footer .rules {
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 30px;
+    background: transparent;
+}
+@media (min-width: 768px) {
+    header {
+        width: 45%;
+    }
+    main {
+        width: 50%;
+    }
+    .img-container {
+        width: 150px;
+        height: 150px;
+        border-width: 15px;
+    }
+    .choices article .img-container {
+        order: 2;
+    }
+    .choices .decide {
+        position: unset;
+        transform: unset;
+        width: unset;
+    }
+    main .display {
+        width: 70%;
+        margin-top: 30px;
+        display: flex;
+        height: 350px;
+    }
+    footer {
+        left: 90%;
+        transform: unset;
+    }
+    .rule-overlay {
+        width: 350px;
+        max-width: 50%;
+        height: 350px;
+        left: 50%;
+        top: 15%;
+        transform: translateX(-50%);
+        border-radius: 5px;
+    }
+    .rule-overlay i {
+        position: absolute;
+        top: 3%;
+        right: 5%;
+    }
+}

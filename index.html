@@ -5,9 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper And Scissors</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="css/all.css">
 </head>
 <body>
-    <img src="" alt="">
+    <header>
+        <section class="options">
+            <p>ROCK</p>
+            <P>PAPER</P>
+            <P>SCISSORS</P>
+        </section>
+        <section class="score-box">
+            <span>SCORE</span>
+            <span class="count"></span>
+        </section>
+    </header>
+    <main>
+        <section class="display">
+            <section class="img-container paper" data-id="paper">
+                <img src="images/icon-paper.svg" alt="">
+            </section>
+            <section class="img-container rock" data-id="rock">
+                <img src="images/icon-rock.svg" alt="">
+            </section>
+            <section class="img-container scissors" data-id="scissors">
+                <img src="images/icon-scissors.svg" alt="">
+            </section>
+        </section>
+        <section class="choices" style="display: none;">
+            <article  class="player">
+                <!--<section class="img-container">
+                    <img src="images/icon-rock.svg" alt="">
+                </section>-->
+                <p>YOU PICKED</p>
+            </article>
+            <article class="decide hide-decide">
+                <h1></h1>
+                <button type="button">PLAY AGAIN</button>
+            </article>
+            <article class="computer">
+                <!--<section class="img-container">
+                    <img src="images/icon-rock.svg" alt="">
+                </section>-->
+                <p>YOU PICKED</p>
+            </article>
+        </section>
+    </main>
+    <section class="rule-overlay">
+        <img src="images/image-rules.svg" alt="">
+        <i class="fa-solid fa-close"></i>
+    </section>
+    <footer>
+        <button type="button" class="rules">RULES</button>
+    </footer>
     <script src="scripts/script.js"></script>
 </body>
 </html>
