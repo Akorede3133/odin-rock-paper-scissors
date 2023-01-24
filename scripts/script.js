@@ -1,3 +1,4 @@
+/****** --- Variable Declarations --- ******/
 let playerScore = 0;
 const displayPage = document.querySelector('.display');
 const choicePage = document.querySelector('.choices');
@@ -10,7 +11,13 @@ const declareWinnerText = document.querySelector('.decide h1');
 const decideContainer = document.querySelector('.decide');
 const playAgainBtn = document.querySelector('.decide button');
 const count = document.querySelector('.count');
-//count.textContent = getLocalStorage();
+const closeModalBtn = document.querySelector('.fa-close');
+const ruleOverlay = document.querySelector('.rule-overlay');
+const ruleBtn = document.querySelector('.rules');
+/****** --- End of Variable Declarations --- ******/
+
+
+/****** --- Event Listeners --- ******/
 window.addEventListener('DOMContentLoaded', ()=> {
     playerScore = getLocalStorage();
     count.textContent = playerScore;
@@ -38,6 +45,16 @@ displayImages.forEach(item=> {
 playAgainBtn.addEventListener('click', ()=> {
     restartGame();
 })
+ruleBtn.addEventListener('click', ()=> {
+    ruleOverlay.classList.remove('hide-overlay');
+})
+closeModalBtn.addEventListener('click', ()=> {
+    ruleOverlay.classList.add('hide-overlay');
+})
+/***** ---- End of Event Listeners ---- ******/
+
+
+/****** --- Helper Functions ----******/
 function restartGame() {
     displayPage.style.display = 'flex';
     choicePage.style.display = 'none';
@@ -111,4 +128,5 @@ function getLocalStorage() {
     let score = localStorage.getItem('score') ? JSON.parse(localStorage.getItem('score')) : 0;
     return +score;
 }
+/****** --- End of Helper Functions ----******/
 
