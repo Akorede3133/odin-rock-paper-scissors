@@ -10,8 +10,10 @@
 - Family: [Barlow Semi Condensed](https://fonts.google.com/specimen/Barlow+Semi+Condensed)
 - Weights: 600, 700*/
 
+ @import url('https://fonts.googleapis.com/css2?family=Alata&family=Barlow+Semi+Condensed:wght@600&family=Josefin+Sans:wght@300&family=Lobster&family=Roboto+Mono:ital@1&family=Ubuntu&display=swap');
 html {
     box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
 }
 *,
 *::after,
